@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src",
+  "scripts": {
+    "dev": "nodemon ./src/index.js",
+    "start": "node index.js",
+    "lint": "eslint"
+  },
+  "author": "Nahuel Soma",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "@hapi/boom": "^10.0.0",
+    "axios": "^0.27.2",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.18.1"
+  }
+}

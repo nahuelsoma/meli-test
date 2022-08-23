@@ -1,6 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
+import Layout from '../components/Layout';
+
 import useFetchItems from '../hooks/useFetchItems';
 import Loading from '../components/Loading';
 import ItemDetails from '../components/ItemDetails';
@@ -14,7 +16,11 @@ function SingleItem() {
   const { data, error, loading } = useFetchItems(id, endpoint);
 
   if (!id || error) {
-    return <NotFound />;
+    return (
+      <>
+        <NotFound />
+      </>
+    );
   }
 
   const { item } = data;

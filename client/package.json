@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve --mode development",
+    "serve:dev": "webpack --mode development && npx serve dist -s",
     "build": "webpack --mode production",
     "format": "prettier --write '{*.js,src/**/*.{js,jsx}}'",
     "lint": "eslint \"src/**/*.{js,jsx}\" --fix"
@@ -42,6 +43,8 @@
     "sass-loader": "13.0.2",
     "webpack": "5.74.0",
     "webpack-cli": "4.10.0",
-    "webpack-dev-server": "4.10.0"
+    "webpack-dev-server": "4.10.0",
+    "webpack-pwa-manifest": "^4.3.0",
+    "workbox-webpack-plugin": "^6.5.4"
   }
 }

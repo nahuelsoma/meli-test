@@ -1,3 +1,3 @@
-const API = 'http://localhost:3005/api';
+const API = 'https://sleepy-ridge-60360.herokuapp.com/api';
 
 export default API;

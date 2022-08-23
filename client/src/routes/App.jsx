@@ -1,24 +1,27 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import Loading from '../components/Loading';
 import Layout from '../components/Layout';
-import Home from '../containers/Home';
-import SearchItems from '../containers/SearchItems';
-import ItemDetail from '../containers/SingleItem';
-import NotFound from '../components/NotFound';
-
 import '../styles/App.scss';
+
+const Home = lazy(() => import('../containers/Home'));
+const SearchItems = lazy(() => import('../containers/SearchItems'));
+const SingleItem = lazy(() => import('../containers/SingleItem'));
+const NotFound = lazy(() => import('../components/NotFound'));
 
 function App() {
   return (
     <BrowserRouter>
       <Layout>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/items" element={<SearchItems />} />
-          <Route exact path="/items/:id" element={<ItemDetail />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Suspense fallback={<Loading />}>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/items" element={<SearchItems />} />
+            <Route exact path="/items/:id" element={<SingleItem />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </Layout>
     </BrowserRouter>
   );

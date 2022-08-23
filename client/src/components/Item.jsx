@@ -9,6 +9,7 @@ function Item({ item }) {
   if (!item.id) {
     return <div className="empty-item">Empty Item</div>;
   }
+
   const priceArray = item.price.amount
     ? item.price.amount.toString().split('.')
     : ['----', '--'];

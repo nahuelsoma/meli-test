@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Layout from '../components/Layout';
 import logo from '../assets/images/Logo_ML_2x.png';
 import HomeMetadata from './metadata/HomeMetadata';
 import '../styles/containers/Home.scss';

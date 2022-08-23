@@ -1,6 +1,8 @@
 import React from 'react';
 import { useSearchParams } from 'react-router-dom';
 
+import Layout from '../components/Layout';
+
 import useFetchItems from '../hooks/useFetchItems';
 import Loading from '../components/Loading';
 import Item from '../components/Item';
@@ -17,7 +19,11 @@ function SearchItems() {
   const { data, error, loading } = useFetchItems(q, endpoint);
 
   if (!q || error) {
-    return <SearchHelp />;
+    return (
+      <>
+        <SearchHelp />
+      </>
+    );
   }
 
   const { items } = data;

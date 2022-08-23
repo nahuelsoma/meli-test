@@ -1,6 +1,6 @@
 import React from 'react';
 
-import breadcrumbArrow from '../assets/images/bradcrumb-arrow.png';
+import arrow from '../assets/images/arrow.png';
 import '../styles/components/Breadcrumb.scss';
 
 function Breadcrumb({ categoriesPath }) {
@@ -13,14 +13,14 @@ function Breadcrumb({ categoriesPath }) {
       <li className="breadcrumb__item" key={category}>
         <span>{category}</span>
         <div className="breadcrumb__icon">
-          <img src={breadcrumbArrow} alt="arrow" />
+          <img src={arrow} alt="arrow" />
         </div>
       </li>
     );
   }
 
   path.push(
-    <li className="breadcrumb__item">
+    <li className="breadcrumb__item" key={categoriesPath[pathLength - 1]}>
       <span className="breadcrumb__active">
         {categoriesPath[pathLength - 1]}
       </span>

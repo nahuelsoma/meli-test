@@ -55,6 +55,19 @@
         }
     }
 }
+
+.empty-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-height: 150px;
+  margin: 16px;
+  border-radius: 8px;
+  background: $middle;
+  color: $middle-dark;
+}
+
 @media (max-width: 650px){
     .item{
         &__img {

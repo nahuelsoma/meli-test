@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import image from '../../assets/images/Logo_ML@2x.png.png.png';
+import image from '../../assets/images/Logo_ML_2x.png';
 
 function HomeMetadata() {
   const title = 'Test de Frontend de MercadoLibre';

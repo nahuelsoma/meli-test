@@ -1,6 +1,6 @@
 import React from 'react';
 
-import logo from '../assets/images/Logo_ML@2x.png.png.png';
+import logo from '../assets/images/Logo_ML_2x.png';
 import HomeMetadata from './metadata/HomeMetadata';
 import '../styles/containers/Home.scss';
 

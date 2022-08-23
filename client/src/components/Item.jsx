@@ -3,22 +3,33 @@ import { Link } from 'react-router-dom';
 
 import '../styles/components/Item.scss';
 import shippingIcon from '../assets/images/ic_shipping.png';
+import defaultImage from '../assets/images/default_image.jpg';
 
 function Item({ item }) {
-  const priceArray = item.price.amount.toString().split('.');
-  const price = parseInt(priceArray[0], 10).toLocaleString('es-AR', {
-    maximumFractionDigits: 2,
-  });
-  let priceDecimals = priceArray[1];
+  if (!item.id) {
+    return <div className="empty-item">Empty Item</div>;
+  }
+  const priceArray = item.price.amount
+    ? item.price.amount.toString().split('.')
+    : ['----', '--'];
+
+  const price =
+    priceArray[0] === '----'
+      ? '----'
+      : parseInt(priceArray[0], 10).toLocaleString('es-AR', {
+          maximumFractionDigits: 2,
+        });
+
+  let priceDecimals = priceArray[1] ? priceArray[1] : [];
   if (priceDecimals && priceDecimals.length === 1) {
-    priceDecimals = priceArray[1] + 0;
+    priceDecimals += 0;
   }
 
   return (
     <div className="item">
       <div className="item-img">
         <Link to={item.id}>
-          <img src={item.picture} alt={item.title} />
+          <img src={item.picture || defaultImage} alt={item.title} />
         </Link>
       </div>
       <div className="item-info">

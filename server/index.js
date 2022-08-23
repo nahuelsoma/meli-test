@@ -10,10 +10,15 @@ const {
 } = require('./middlewares/error.handler');
 
 const app = express();
-const port = 3005;
+const port = process.env.PORT || 3005;
 
 app.use(express.json());
 app.use(cors());
+
+app.get('/', (req, res) => {
+  res.send('Server ON');
+});
+
 app.use(compression());
 app.use(authorMiddleware);
 

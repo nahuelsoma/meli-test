@@ -1,8 +1,8 @@
-function logErrors(err, req, res, next) {
-  console.log('logErrors');
-  console.error(err);
-  next(err);
-}
+// function logErrors(err, req, res, next) {
+//   console.log('logErrors');
+//   console.error(err);
+//   next(err);
+// }
 
 function dataFetchErrorHandler(err, req, res, next) {
   if (err.message.includes('AxiosError')) {
@@ -34,7 +34,7 @@ function errorHandler(err, req, res, next) {
 }
 
 module.exports = {
-  logErrors,
+  // logErrors,
   dataFetchErrorHandler,
   errorHandler,
 };

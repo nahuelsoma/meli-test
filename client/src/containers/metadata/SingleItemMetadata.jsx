@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet';
 
 function SingleItemMetadata({ item }) {
   const title = item.title ? item.title : '';
-  const price = item.price.ammount
-    ? item.price.ammount.toLocaleString('es-AR', {
+  const price = item.price.amount
+    ? item.price.amount.toLocaleString('es-AR', {
         maximumFractionDigits: 2,
       })
     : '';

@@ -16,7 +16,7 @@ function toItemModel({
     title,
     price: {
       currency: currency_id,
-      ammount: price,
+      amount: price,
       decimals: decimal_places || 2,
     },
     picture: thumbnail,

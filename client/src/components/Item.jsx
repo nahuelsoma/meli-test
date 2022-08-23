@@ -5,7 +5,7 @@ import '../styles/components/Item.scss';
 import shippingIcon from '../assets/images/ic_shipping.png';
 
 function Item({ item }) {
-  const priceArray = item.price.ammount.toString().split('.');
+  const priceArray = item.price.amount.toString().split('.');
   const price = parseInt(priceArray[0], 10).toLocaleString('es-AR', {
     maximumFractionDigits: 2,
   });

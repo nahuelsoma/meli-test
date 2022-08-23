@@ -9,7 +9,7 @@ class CurrenciesService {
     try {
       const currencyData = await this.currenciesData.getCurrencyData(id);
       if (!currencyData) {
-        throw new Error('Product not found');
+        throw new Error('No product found');
       }
       return currencyData;
     } catch (error) {

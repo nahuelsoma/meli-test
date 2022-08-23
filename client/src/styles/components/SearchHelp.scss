@@ -1,0 +1,48 @@
+@import '../global.scss';
+
+.search-help {
+    @include box;
+    text-align: start;
+
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 32px;
+    }
+
+    & img {
+        width: 100px;
+        height: 100px;
+        margin-right: 32px;
+    }
+
+    &-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    & h3 {
+        margin-top: 0;
+        margin-bottom: 16px;
+    }
+
+    & li {
+        margin-left: 16px;
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 650px){
+    .search-help {
+        &-container {
+            flex-direction: column;
+        }
+
+        &__title {
+            margin-top: 32px;
+        }
+    }
+}

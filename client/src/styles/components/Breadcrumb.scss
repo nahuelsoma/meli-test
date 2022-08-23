@@ -1,0 +1,29 @@
+@import '../global.scss';
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 12px;
+  color: $middle-dark;
+
+  &__item {
+    display: flex;
+  }
+
+  &__icon {
+    height: 12px;
+    width: auto;
+    margin: 0 10px;
+
+    & img {
+      height: 8px;
+      object-fit: contain;
+    }
+  }
+
+  &__active {
+    font-weight: 800;
+  }
+}

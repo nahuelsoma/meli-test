@@ -1,0 +1,12 @@
+@import '../global.scss';
+
+.not-found {
+    @include box;
+
+    &__link {
+        font-size: 20px;
+        font-weight: 600;
+        color: $second;
+        margin-top: 40px;
+    }
+}

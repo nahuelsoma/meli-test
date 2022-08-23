@@ -1,0 +1,9 @@
+@import '../global.scss';
+
+.home {
+    @include box;
+
+    &__text {
+        margin-top: 40px;
+    }
+}

@@ -1,0 +1,140 @@
+@import '../global.scss';
+
+.item-detail {
+  @include big-box;
+  display: flex;
+}
+
+.item-description {
+  width: 70%;
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 32px;
+
+    & img {
+      width: 500px;
+      height: auto;
+      object-fit: contain;
+    }
+
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+
+  &__details {
+    color: $middle-dark;
+  }
+}
+
+.item-purchase {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 16px;
+  margin-top: 16px;
+
+  &__condition {
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+    &-number {
+      font-size: 40px;
+      font-weight: 500;
+      margin-right: 16px;
+    }
+
+    & sup {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 765px) {
+  .item-purchase {
+
+    &__title {
+      font-weight: 500;
+    }
+
+    &__price {
+
+      &-number {
+        font-size: 30px;
+      }
+
+      & sup {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .item-detail {
+    flex-direction: column-reverse;
+  }
+
+  .item-description {
+    width: 100%;
+
+    &__image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 32px;
+
+      & img {
+        width: 500px;
+        height: auto;
+        object-fit: contain;
+      }
+
+    }
+
+    &__subtitle {
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+
+    &__details {
+      color: $middle-dark;
+    }
+  }
+
+  .item-purchase {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__price {
+      margin-bottom: 16px;
+    }
+  }
+}

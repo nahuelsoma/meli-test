@@ -1,0 +1,31 @@
+$primary: #FFFFFF;
+$complementary: #222;
+$middle: #EDEDED;
+$middle-dark: #7d7d7d;
+$first: #FFF159;
+$second: #3483FA;
+
+$max-width: 900px;
+
+@mixin box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 500px;
+    border-radius: 4px;
+    background: $primary;
+    text-align: center;
+
+    & h3 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 40px;
+    }
+}
+
+@mixin big-box {
+  padding: 16px;
+  border-radius: 4px;
+  background: $primary;
+}

@@ -33,6 +33,7 @@ router.get('/:id', async (req, res, next) => {
   try {
     const { id } = req.params;
     const item = await service.findOne(id);
+
     res.json({
       author,
       ...item,

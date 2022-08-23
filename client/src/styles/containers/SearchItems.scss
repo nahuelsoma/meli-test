@@ -1,0 +1,10 @@
+@import '../global.scss';
+
+.items-list {
+  @include big-box;
+  list-style-type: none;
+
+  & li:not(:last-child) {
+    border-bottom: 1px solid $middle;
+  }
+}

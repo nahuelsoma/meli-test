@@ -9,7 +9,7 @@ class CategoriesService {
     try {
       const categoryData = await this.categoriesData.getCategoryData(id);
       if (!categoryData.length === 0) {
-        throw new Error('Product not found');
+        throw new Error('No product found');
       }
       return categoryData;
     } catch (error) {

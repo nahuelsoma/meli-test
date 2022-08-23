@@ -1,0 +1,59 @@
+@import '../global.scss';
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  background: $first;
+}
+
+nav{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 16px;
+  width: $max-width;
+
+  & .logo {
+    height: 36px;
+    width: 53px;
+  }
+
+  & form {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    padding: 2px;
+    margin-left: 16px;
+    border: 1px solid $middle;
+    border-radius: 1px;
+    background: $primary;
+
+    & .search {
+      width: 100%;
+      height: 100%;
+      padding: 0 10px;
+      font-size: 16px;
+      font-weight: 400;
+      border: none;
+      background: none;
+      color: $complementary;
+    }
+
+    & button{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 16px;
+      font-size: 16px;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      background: $middle;
+      color: $complementary;
+    }
+  }
+}

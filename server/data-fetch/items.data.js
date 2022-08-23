@@ -1,7 +1,5 @@
 const axios = require('axios').default;
 
-// https://api.mercadolibre.com/sites/MLA/search?q= :query
-
 class ItemsData {
   constructor() {
     this.http = axios.create({
@@ -49,6 +47,14 @@ class ItemsData {
       const { data: itemDescription } = await this.http.get(url);
       return itemDescription;
     } catch (error) {
+      if (
+        error.response.data.message ===
+        `Description of item with id ${id} not found`
+      ) {
+        return {
+          plain_text: '---',
+        };
+      }
       throw new Error(error);
     }
   }

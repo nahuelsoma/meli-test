@@ -2,9 +2,9 @@
 
 Este repositorio contiene el cliente y servidor requeridos en el test de frontend de MercadoLibre.
 
-Se puede probar una demo en https://meli-test-client.nahuelsoma.com/.
+Se puede ver corriendo en https://meli-test-client.vercel.app/
 
-Por su parte, el servidor se encuentra corriendo en https://meli-test-xi.vercel.app/
+Por su parte, el servidor se encuentra corriendo en https://meli-test-server.nahuelsoma.com/
 
 ## Cómo ejecutar el proyecto 🆙
 

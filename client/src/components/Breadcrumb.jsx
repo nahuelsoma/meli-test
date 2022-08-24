@@ -4,10 +4,14 @@ import arrow from '../assets/images/arrow.png';
 import '../styles/components/Breadcrumb.scss';
 
 function Breadcrumb({ categoriesPath }) {
+  if (!categoriesPath) {
+    return null;
+  }
+
   const pathLength = categoriesPath.length;
   const path = [];
 
-  for (let i = 0; i < pathLength - 1; i++) {
+  for (let i = 0; i < pathLength - 1; i += 1) {
     const category = categoriesPath[i];
     path.push(
       <li className="breadcrumb__item" key={category}>

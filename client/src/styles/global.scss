@@ -8,20 +8,21 @@ $second: #3483FA;
 $max-width: 900px;
 
 @mixin box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 500px;
-    border-radius: 4px;
-    background: $primary;
-    text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: calc(100vh - 32px - 120px - 10px);
+  border-radius: 4px;
+  text-align: center;
+  padding: 16px;
+  background: $primary;
 
-    & h3 {
-        font-size: 20px;
-        font-weight: 600;
-        margin-top: 40px;
-    }
+  & h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 40px;
+  }
 }
 
 @mixin big-box {

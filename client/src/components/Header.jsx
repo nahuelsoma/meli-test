@@ -1,9 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 
-import LogoMeli from '../assets/images/Logo_ML.png';
+import logo from '../assets/images/Logo_ML.png';
 import searchImg from '../assets/images/ic_Search.png';
-
 import '../styles/components/Header.scss';
 
 function Header() {
@@ -27,7 +26,7 @@ function Header() {
       <nav>
         <div className="logo">
           <Link to="/">
-            <img src={LogoMeli} alt="" />
+            <img src={logo} alt="" />
           </Link>
         </div>
         <form>

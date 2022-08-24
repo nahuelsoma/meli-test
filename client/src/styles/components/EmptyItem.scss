@@ -1,12 +1,13 @@
 @import '../global.scss';
 
-.not-found {
+.empty-item {
   @include box;
+  text-align: center;
 
   &__link {
     font-size: 20px;
     font-weight: 600;
-    color: $second;
     margin-top: 40px;
+    color: $second;
   }
 }

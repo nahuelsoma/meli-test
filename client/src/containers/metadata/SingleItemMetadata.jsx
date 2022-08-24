@@ -1,17 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
+import itemPriceHandler from '../../utils/priceHandler';
+
 function SingleItemMetadata({ item }) {
   const title = item.title ? item.title : '';
-  const price = item.price.amount
-    ? item.price.amount.toLocaleString('es-AR', {
-        maximumFractionDigits: 2,
-      })
-    : '';
-  const currency = item.price.currency ? item.price.currency : '';
-  const fullTitle = `${title} | ${
-    currency === 'ARS' ? '$' : currency
-  } ${price}`;
+  const price = itemPriceHandler(item.price);
+  const fullTitle = `${title} | ${price.currency} ${price.amount.integer},${price.amount.decimals}`;
   const description = item.description ? item.description.substr(0, 200) : '';
   const image = item.picture ? item.picture : '';
   const location = window.location.href;

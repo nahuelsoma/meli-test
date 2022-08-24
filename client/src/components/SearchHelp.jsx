@@ -1,13 +1,13 @@
 import React from 'react';
 
-import search from '../assets/images/search.jpg';
+import searchImg from '../assets/images/search.jpg';
 import '../styles/components/SearchHelp.scss';
 
 function SearchHelp() {
   return (
     <div className="search-help">
       <div className="search-help-container">
-        <img src={search} alt="search" />
+        <img src={searchImg} alt="search" />
         <div className="search-help-info">
           <h3 className="search-help__title">
             No hay publicaciones que coincidan con tu búsqueda.

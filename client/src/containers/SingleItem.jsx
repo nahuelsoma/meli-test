@@ -1,8 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-import Layout from '../components/Layout';
-
 import useFetchItems from '../hooks/useFetchItems';
 import Loading from '../components/Loading';
 import ItemDetails from '../components/ItemDetails';
@@ -16,27 +14,19 @@ function SingleItem() {
   const { data, error, loading } = useFetchItems(id, endpoint);
 
   if (!id || error) {
-    return (
-      <>
-        <NotFound />
-      </>
-    );
+    return <NotFound />;
   }
 
   const { item } = data;
   const { categories } = data;
 
-  return (
+  return loading ? (
+    <Loading />
+  ) : (
     <>
-      {categories && <Breadcrumb categoriesPath={categories} />}
-      {loading ? (
-        <Loading />
-      ) : (
-        <>
-          <ItemDetails item={item} />
-          <SingleItemMetadata item={item} />
-        </>
-      )}
+      <Breadcrumb categoriesPath={categories} />
+      <ItemDetails item={item} />
+      <SingleItemMetadata item={item} />
     </>
   );
 }

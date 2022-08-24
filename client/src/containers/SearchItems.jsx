@@ -1,8 +1,6 @@
 import React from 'react';
 import { useSearchParams } from 'react-router-dom';
 
-import Layout from '../components/Layout';
-
 import useFetchItems from '../hooks/useFetchItems';
 import Loading from '../components/Loading';
 import Item from '../components/Item';
@@ -19,33 +17,25 @@ function SearchItems() {
   const { data, error, loading } = useFetchItems(q, endpoint);
 
   if (!q || error) {
-    return (
-      <>
-        <SearchHelp />
-      </>
-    );
+    return <SearchHelp />;
   }
 
   const { items } = data;
   const { categories } = data;
 
-  return (
+  return loading ? (
+    <Loading />
+  ) : (
     <>
-      {categories && <Breadcrumb categoriesPath={categories} />}
-      {loading ? (
-        <Loading />
-      ) : (
-        <>
-          <ol className="items-list">
-            {items.map((item) => (
-              <li key={item.id}>
-                <Item key={item.id} item={item} />
-              </li>
-            ))}
-          </ol>
-          <SearchItemsMetadata items={items} q={q} />
-        </>
-      )}
+      <Breadcrumb categoriesPath={categories} />
+      <ol className="items-list">
+        {items.map((item) => (
+          <li key={item.id}>
+            <Item key={item.id} item={item} />
+          </li>
+        ))}
+      </ol>
+      <SearchItemsMetadata items={items} q={q} />
     </>
   );
 }

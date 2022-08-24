@@ -1,59 +1,59 @@
 @import '../global.scss';
 
-.item{
+.item {
+  display: flex;
+  padding: 16px 0;
+  background: $primary;
+
+  &-img {
+    width: 200px;
+    height: 200px;
+    margin-right: 16px;
+
+    & img {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+    }
+  }
+
+  &-info {
     display: flex;
-    padding: 16px 0;
-    background: $primary;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 8px;
 
-    &-img {
-        width: 200px;
-        height: 200px;
-        margin-right: 16px;
+    &__main {
+      width: 75%;
+      margin-right: 16px;
 
-        & img {
-            width: 200px;
-            height: 200px;
-            object-fit: contain;
-        }
-    }
-
-    &-info {
+      &-price {
         display: flex;
-        justify-content: space-between;
-        width: 100%;
-        margin-top: 8px;
+        margin-bottom: 8px;
+        font-size: 24px;
+        font-weight: 500;
 
-        &__main {
-            width: 75%;
-            margin-right: 16px;
-
-            &-price {
-                display: flex;
-                margin-bottom: 8px;
-                font-size: 24px;
-                font-weight: 500;
-
-                & sup {
-                    font-size: 12px;
-                }
-
-                &-num {
-                    margin-right: 12px;
-                }
-            }
-
-            &-title {
-                font-size: 16px;
-                font-weight: 500;
-            }
+        & sup {
+          font-size: 12px;
         }
 
-        &__location {
-            width: 25%;
-            font-size: 12px;
-            padding: 8px 16px;
+        &-num {
+          margin-right: 12px;
         }
+      }
+
+      &-title {
+        font-size: 16px;
+        font-weight: 500;
+      }
     }
+
+    &__location {
+      width: 25%;
+      font-size: 12px;
+      padding: 8px 16px;
+    }
+  }
 }
 
 .empty-item {
@@ -68,50 +68,50 @@
   color: $middle-dark;
 }
 
-@media (max-width: 650px){
-    .item{
-        &-img {
-            width: 150px;
-            height: 150px;
-            margin-right: 16px;
+@media (max-width: 650px) {
+  .item {
+    &-img {
+      width: 150px;
+      height: 150px;
+      margin-right: 16px;
 
-            & img {
-                width: 150px;
-                height: auto;
-                object-fit: contain;
-            }
-        }
-
-        &-info {
-        flex-direction: column;
-        justify-content:flex-start;
-
-            &__main {
-                width: 100%;
-                margin-right: 0;
-
-                &-price {
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 8px;
-
-                    & p {
-                        font-size: 24px;
-                        font-weight: 500;
-                        margin-right: 16px;
-                    }
-                }
-
-                &-title {
-                    font-size: 16px;
-                }
-            }
-
-            &__location {
-                width: 100%;
-                padding: 0;
-                margin-top: 8px;
-            }
-        }
+      & img {
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+      }
     }
+
+    &-info {
+      flex-direction: column;
+      justify-content: flex-start;
+
+      &__main {
+        width: 100%;
+        margin-right: 0;
+
+        &-price {
+          display: flex;
+          align-items: center;
+          margin-bottom: 8px;
+
+          & p {
+            font-size: 24px;
+            font-weight: 500;
+            margin-right: 16px;
+          }
+        }
+
+        &-title {
+          font-size: 16px;
+        }
+      }
+
+      &__location {
+        width: 100%;
+        padding: 0;
+        margin-top: 8px;
+      }
+    }
+  }
 }

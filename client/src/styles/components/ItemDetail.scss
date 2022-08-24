@@ -3,6 +3,7 @@
 .item-detail {
   @include big-box;
   display: flex;
+  flex-direction: row-reverse;
 }
 
 .item-description {
@@ -40,6 +41,13 @@
   justify-content: flex-start;
   margin-left: 16px;
   margin-top: 16px;
+
+  &__sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 32px;
+
+  }
 
   &__condition {
     font-size: 12px;
@@ -92,7 +100,7 @@
 
 @media (max-width: 650px) {
   .item-detail {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .item-description {

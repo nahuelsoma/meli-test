@@ -8,7 +8,7 @@ header {
   background: $first;
 }
 
-nav{
+nav {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -43,7 +43,7 @@ nav{
       color: $complementary;
     }
 
-    & button{
+    & button {
       display: flex;
       align-items: center;
       justify-content: center;

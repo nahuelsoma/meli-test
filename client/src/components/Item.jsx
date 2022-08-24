@@ -1,30 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import '../styles/components/Item.scss';
+import EmptyItem from './EmptyItem';
+import itemPriceHandler from '../utils/priceHandler';
 import shippingIcon from '../assets/images/ic_shipping.png';
 import defaultImage from '../assets/images/default_image.jpg';
+import '../styles/components/Item.scss';
 
 function Item({ item }) {
   if (!item.id) {
-    return <div className="empty-item">Empty Item</div>;
+    return <EmptyItem link={false} />;
   }
 
-  const priceArray = item.price.amount
-    ? item.price.amount.toString().split('.')
-    : ['----', '--'];
-
-  const price =
-    priceArray[0] === '----'
-      ? '----'
-      : parseInt(priceArray[0], 10).toLocaleString('es-AR', {
-          maximumFractionDigits: 2,
-        });
-
-  let priceDecimals = priceArray[1] ? priceArray[1] : [];
-  if (priceDecimals && priceDecimals.length === 1) {
-    priceDecimals += 0;
-  }
+  const price = itemPriceHandler(item.price);
 
   return (
     <div className="item">
@@ -38,9 +26,8 @@ function Item({ item }) {
           <div className="item-info__main-price">
             <Link to={item.id}>
               <div className="item-info__main-price-num">
-                {item.price.currency === 'ARS' ? '$' : item.price.currency}{' '}
-                {price}
-                <sup>{priceDecimals}</sup>
+                {price.currency} {price.amount.integer}
+                <sup>{price.amount.decimals}</sup>
               </div>
             </Link>
             <div

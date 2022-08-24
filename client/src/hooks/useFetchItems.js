@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
 
-import API from '../API';
-
 function useFetchItems(value, endpoint) {
   const [state, setState] = useState({
     data: {},
@@ -18,7 +16,7 @@ function useFetchItems(value, endpoint) {
 
     if (value) {
       window
-        .fetch(`${API}${endpoint}${value}`)
+        .fetch(`${process.env.API_URL}${endpoint}${value}`)
         .then((response) => response.json())
         .then((data) => {
           setState({

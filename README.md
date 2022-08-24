@@ -4,7 +4,7 @@ Este repositorio contiene el cliente y servidor requeridos en el test de fronten
 
 Se puede probar una demo en https://meli-test-client.nahuelsoma.com/.
 
-Por su parte, el servidor se encuentra corriendo en https://meli-test-server.nahuelsoma.com/
+Por su parte, el servidor se encuentra corriendo en https://meli-test-xi.vercel.app/
 
 ## Cómo ejecutar el proyecto 🆙
 

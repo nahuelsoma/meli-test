@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -49,7 +50,7 @@ module.exports = {
   },
   plugins: [
     new EnvironmentPlugin({
-      API_URL: 'http://localhost:3005/api',
+      API_URL: 'https://meli-test-server.nahuelsoma.com/api',
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',

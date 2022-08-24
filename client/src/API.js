@@ -1,3 +1,3 @@
-const API = 'https://sleepy-ridge-60360.herokuapp.com/api';
+const API = 'https://meli-test-server.nahuelsoma.com/api';
 
 export default API;

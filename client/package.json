@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve --mode development",
-    "serve:dev": "webpack --mode development && npx serve dist -s",
     "build": "webpack --mode production",
+    "serve:dev": "webpack --mode development && npx serve dist -s",
+    "serve:build": "webpack --mode production && npx serve dist -s",
     "format": "prettier --write '{*.js,src/**/*.{js,jsx}}'",
     "lint": "eslint \"src/**/*.{js,jsx}\" --fix"
   },

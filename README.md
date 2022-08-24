@@ -36,10 +36,9 @@ En esta instancia el servidor se encuentra corriendo en http://localhost:3005 �
 
 ### 2️⃣ Ejecutando el cliente
 
-1. Regresar al directorio raíz y dirigirse a la carpeta /client:
+1. Desde el directorio raíz dirigirse a la carpeta /client:
 
 ```
-cd ..
 cd client
 ```
 

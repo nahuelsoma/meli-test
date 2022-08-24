@@ -1,3 +1,3 @@
-const API = 'http://localhost:3005/api';
+const API = 'https://meli-test-client.nahuelsoma.com/api';
 
 export default API;

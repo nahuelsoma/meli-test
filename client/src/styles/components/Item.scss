@@ -3,6 +3,7 @@
 .item {
   display: flex;
   padding: 16px 0;
+  width: 100%;
   background: $primary;
 
   &-img {
@@ -70,6 +71,7 @@
 
 @media (max-width: 650px) {
   .item {
+
     &-img {
       width: 150px;
       height: 150px;
